@@ -1,6 +1,6 @@
 Introducing GeoPandas
 ***********************
-A presentation at Kiwi Pycon 2017.
+A presentation for Kiwi PyCon 2017 in Auckland, New Zealand.
 
 
 Authors
