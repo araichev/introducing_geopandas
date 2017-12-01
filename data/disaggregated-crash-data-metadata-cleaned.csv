@@ -1,0 +1,74 @@
+variable,description
+CRASH_YEAR,"The year in which a crash occurred, if known. "
+CRASH_FIN_YEAR,"The financial (fin) year in which a crash occurred, if known."
+CRASH_SEV,"The severity of a crash. Possible values are 'F' (fatal), 'S' (serious), 'M' (minor), 'N' (non-injury). This is determined by the worst injury sustained in the crash at time of entry."
+FATAL_COUNT,A count of the number of fatal casualties associated with this crash.
+SERIOUSINJ_COUNT,A count of the number of serious injuries (inj) associated with this crash.
+MINORINJ_COUNT,A count of the number of minor injuries (inj) associated with this crash.
+MULTI_VEH,"A variable derived from the number of vehicles which are given roles in the crash. The variable has the following possible values; single vehicle, multi-vehicle , cyclist and vehicle(s), pedestrian and vehicle(s) , cyclist only, cyclist(s) and pedestrian(s) , vehicle(s) and other, others, no vehicles and other. Vehicle means non-parked vehicle. Parked vehicles are treated as objects in a crash."
+HOLIDAY,"Indicates where a crash occurred during a 'Christmas/New Year', 'Easter', 'Queens Birthday' or 'Labour Weekend' holiday period, otherwise 'None'. "
+LG_REGION_DESC,Identifies the local government (LG) region. The boundaries match territorial local authority (TLA) boundaries in most places. A blank cell occurs where the crash is said to have occurred in a particular TLA and the LG boundaries do not match.
+TLA_ID,The unique identifier for a territorial local authority (TLA). Each crash is assigned a TLA based on where the crash occurred.
+TLA_NAME,The name of the territorial local authority (TLA) the crash has been attributed.
+AU_ID,The unique identifier of an area unit.
+MB_ID,The unique identifier of a meshblock.
+EASTING,The easting coordinate of an object (usually a crash) expressed in NZMG referred to the WGS84 datum to a precision of 1m.
+NORTHING,The northing coordinate of an object (usually a crash) expressed in NZMG referred to the WGS84 datum to a precision of 1m.
+CRASH_LOCN1,"Part 1 of the 'crash location' (crash_locn). May be a road name, route position (RP), landmark, or other, e.g. 'Ninety Mile Beach'. Used for location descriptions in reports etc."
+CRASH_LOCN2,"Part 2 of the 'crash location' (crash_locn). May be a side road name, landmark etc. Used for location descriptions in reports etc."
+OUTDTD_LOCN_DESC,"Indicates if the location  for this crash is an 'Outdated Location'(outdtd_locn) or 'Current location'. A crash is said to have an 'Outdated location' where  the road might have moved, or does not exist anymore. "
+CRASH_RP_RS,The 'reference station' (RS) for the 'route position' (RP) of a crash.
+INTERSECTION,"Indicate if a crash happened at an 'Intersection', 'At Landmark' or 'Unknown'."
+JUNCTION_TYPE,"The type of junction the crash happened at. Possible road junctions include Driveway, Roundabout, X Type Junction, 'T Type Junction', 'Y Type Junction', or 'Multi Road Join'. The junction type may also be unknown. Note crashes that did not occur at a junction are also given a value of unknown. "
+CR_RD_SIDE_RD,Indicates whether the principal vehicle in a crash was on the crash road (cr_rd) [1] or side road (sd_rd) [2] at the time of the crash. Note that 'on side road' (2)  can only happen if the crash occurred at an intersection.
+CRASH_DIRN_DESC,"The direction (dirn) of the crash from the reference point. Values possible are 'North', 'East', 'South' or 'West'."
+CRASH_DIST,The distance (dist) of the crash from the reference point for the crash. The reference point is often the intersection of 'crash road' and 'side road' (refer to 'cr_rd_sd_rd' variable).
+CRASH_RP_DIRN_DESC,"Indicates the direction of travel (where known) on a State Highway (SH) with respect to the highway origin. Possible values include 'Increasing' where the crash occurred in increasing distance from SH origin, 'Decreasing' where the crash occurred in decreasing distance to the SH origin, or blank. "
+DIRN_ROLE1_DESC,"The direction (dirn) of the principal vehicle involved in the crash. Possible values are North, South, East or West."
+CRASH_RP_DISP,The displacement (disp) of the crash from a reference station (RS). Part of the crash route position (RP).
+CRASH_SH_DESC,"Indicates where a crash is reported to have occurred on a State Highway (SH). Possible values include 'Yes' where the crash occurred on a SH, otherwise 'No'."
+CRASH_RP_SH,The State Highway (SH) on which a crash occurred. This is part of a 'route position' (RP) for the crash. Possible values can be any valid natural SH designation reference (e.g. '1N' is SH1 in the North Island.).
+CRASH_RP_NEWS_DESC,"Where the crash occurred on a median-divided State Highway (SH), this flag indicates which side of the median the crash happened. Values 'Northbound', 'Southbound, 'Eastbound' or 'Westbound'."
+INTSN_MIDBLOCK,"A derived variable to indicate if a crash occured at an intersection (intsn) or not. The 'intsn_midblock' variable is calculated using the 'intersection' and 'junction_type' variables. Values are  'Intersection' (where intersection variable = 'Intersection' or {'Intersection' = 'At Landmark' and junction_type is not in ('Unknown' or 'Driveway')} OR {Intersection = 'Unknown' and crash_dist <= 10}), otherwise 'Midblock' for crashes not meeting the criteria for 'Intersection')."
+FLAT_HILL,Whether the road is flat or sloped. Possible values include 'Flat or 'Hill'.
+ROAD_CHARACTER,"The general nature of the road. Possible values include 'Bridge', 'Motorway Ramp', 'Railway Crossing' or  ' Unknown'."
+ROAD_CURVATURE,"The curvature of the road. Possible values include 'Straight Road', 'Easy Curve', 'Moderate Curve' or 'Severe curve'."
+ROAD_LANE,"The lane configuration of the road. Possible values : '1' (one way), '2' (two way), 'M' (for where a median exists), 'O' (for off-road lane configuations), ' ' ( for unknown or invalid configuarations)."
+ROAD_MARKINGS,"The road markings at the crash site. Possible values: 'Ped Crossing' (for pedestrian crossings), 'Raised Island', 'Painted Island', 'No Passing Lanes', 'Centre Line', 'No Marks' or ' Unknown'."
+ROAD_SURFACE,The road surface description applying at the crash site. Possible values: 'Sealed' or 'Unsealed'.
+ROAD_WET,"The road wetness at the time and place of the crash. Possible values: 'Wet', 'Dry', 'Ice/Snow' or 'Unknown'"
+NUM_LANES,The number(num) of lanes on the crash road.
+TRAFFIC_CTRL,"The traffic control (ctrl) signals at the crash site. Possible values are 'Traffic Signals', 'Stop Sign', 'Give Way Sign', 'Pointsman', 'School Patrol', 'Nil' or ' N/A'."
+SPD_LIM,"The speed (spd) limit (lim)  in force at the crash site at the time of the crash. May be a number, or 'LSZ' for a limited speed zone."
+ADV_SPD,The advisory (adv) speed (spd) at the crash site at the time of the crash.
+TMP_SPD_LIM,The temporary (temp) speed (spd) limit (lim) at the crash site if one exists (e.g. for road works).
+URBAN,"A derived variable using the 'spd_lim' variable. Possible values are 'Urban' (urban, spd_lim < 80) or 'Open Road' (open road, spd_lim >=80 or 'LSZ')."
+DARK_LIGHT,"A variable derived from the 'light' variable. Values 'Dark' (if  'light' = 'Dark' or 'Twilight'), 'Light' ( 'light' = 'Bright', 'Overcast') or ' Unknown'  (light = ' ')."
+LIGHT,"The light at the time and place of the crash. Possible values: 'Bright Sun', 'Overcast', 'Twilight, 'Dark' or ' Unknown'."
+STREET_LIGHT,"The street lighting at the time of the crash. Possible values 'On', 'Off', 'None' or ' Unknown'."
+WEATHER_A,"Indicates weather at the crash time/place. See wthr_b. Values that are possible are 'Fine', 'Mist', 'Light Rain', 'Heavy Rain', 'Snow', 'Unknown'."
+WEATHER_B,"The weather at the crash time/place. See weather_a. Values 'Frost', 'Strong Wind' or 'Unknown'."
+ANIMALS,"Derived variable to indicate how many times an 'Animal(s)'  was struck in the crash. This is used where the animals, being driven or led, were under control."
+BRIDGE,"Derived variable to indicate how many times a bridge, tunnel, the abutments, handrails were struck in the crash."
+CLIFF_BANK,Derived variable to indicate how many times a 'cliff' or 'bank' was struck in the crash. This includes retaining walls
+DEBRIS,"Derived variable to indicate how many times debris, boulders or items dropped or thrown from a vehicle(s) were struck in the crash "
+DITCH,Derived variable to indicate how many times a 'ditch' or 'waterable drainage channel' was struck in a crash.
+FENCE,"Derived variable to indicate how many times a 'fence' was struck in the crash. This includes letterbox(es), hoardings, private roadside furniture, hedges, sight rails, etc."
+GUARD_RAIL,"Derived variable to indicate how many times a guard or guard rail was struck in the crash. This includes 'New Jersey' barriers, 'ARMCO', sand filled barriers, wire catch fences, etc."
+HOUSE_OR_BLDG,"Derived variable to indicate how many times a houses, garages, sheds or other buildings(Bldg) were struck in the crash"
+KERB,"Derived variable to indicate how many times a kerb was struck in the crash, that contributed directly to the crash. "
+OBJ_THROWN_DROPPED,Derived variable to indicate how many times objects were thrown at or dropped on vehicles in the crash. 
+OTHER,"Derived variable to indicate how many times an object was struck in a crash and the object struck was not pre-defined. This variable includes stockpiled materials, rubbish bins, fallen poles, fallen trees, etc."
+OVER_BANK,Derived variable to indicate how many times an embankment was struck or driven over during a crash. This variable includes other vertical drops driven over during a crash.
+PARKED_VEHICLE,Derived variable to indicate how many times a parked or unattended vehicle was struck in the crash. This variable can include trailers.
+PHONE_BOX_ETC,"Derived variable to indicate how many times a telephone kiosk traffic signal controllers, bus shelters or other public furniture was struck in the crash"
+POST_OR_POLE,"Derived variable to indicate how many times a post or pole was struck in the crash. This includes light, power, phone, utility poles and objects practically forming part of a pole (i.e. 'Transformer Guy' wires)"
+ROADWORKS,"Derived variable to indicate how many times an object associated with 'roadworks' (including signs, cones, drums, barriers, but not roadwork vehicles) was struck during the crash"
+SLIP_OR_FLOOD,"Derived variable to indicate how many times landslips, washouts or floods (excluding rivers) were objects struck in the crash"
+STRAY_ANIMAL,"Derived variable to indicate how many times a stray animal(s) was struck in the crash. This variable includes wild animals such as pigs, goats, deer, straying farm animals, house pets and birds."
+TRAFFIC_ISLAND,"Derived variable to indicate how many times a traffic island, medians (excluding barriers)was struck in the crash."
+TRAFFIC_SIGN,"Derived variable to indicate how many times 'traffic signage' (including traffic signals, their poles, bollards or roadside delineators) was struck in the crash."
+TRAIN,"Derived variable to indicate how many times a train, rolling stock or jiggers was struck in the crash, whether stationary or moving"
+TREES,Derived variable to indicate how many times trees or other growing items were struck during the crash. 
+VEHICLE,"Derived variable to indicate how many times a stationary attended vehicle was struck in the crash. This includes broken down vehicles, workmen's vehicles, taxis, buses."
+WATER_RIVER,"Derived variable to indicate how many times a body of water (including rivers, streams, lakes, the sea, tidal flates, canals, watercourses or swanps) was struck in the crash."
